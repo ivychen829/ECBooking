@@ -1,0 +1,886 @@
+@charset "utf-8"
+@import "_flexSlider"
+@import "_framework"
+@import "icomoon.css"
+@import "_mixin"
+
+// Header
+#header
+  background-color: $headerColor
+
+#header #logo
+  margin: 30px 0 0 0
+
+  img
+    margin: 0
+    padding: 0
+    top: 15px
+    position: absolute
+
+
+// Page Intro
+#pageintro
+  height: 260px
+
+  li
+    article
+      display: block
+      max-width: 75%
+      margin: 0 auto
+      text-align: center
+
+      *
+        margin: 0
+
+    p:first-of-type
+      margin-bottom: 10px
+      font-style: italic
+
+    .heading
+      margin-bottom: 30px
+      font-size: 3rem
+      word-wrap: break-word
+
+    p:nth-of-type(2)
+      line-height: 1.5rem
+
+    footer
+      margin-top: 40px
+
+  footer
+    form
+      display: block
+      position: relative
+      max-width: 50%
+      margin: 0 auto
+      overflow: hidden
+
+    input, button
+      display: block
+      height: 44px
+      border: none
+
+    input
+      width: 100%
+      padding: 5px 40px 5px 15px
+
+    button
+      position: absolute
+      top: 1px
+      right: 1px
+      width: 42px
+      height: 42px
+      font-size: 16px
+      cursor: pointer
+
+      em
+        display: none
+
+// Content Area
+.container
+  padding: 80px 0
+
+
+// Content
+.sectiontitle
+  display: block
+  margin-bottom: 80px
+
+  *
+    margin: 0
+
+#introblocks
+  position: relative
+  z-index: 1
+  margin: -120px 0 50px
+  padding: 30px
+  border-radius: 10px
+
+  > ul > li
+    text-align: center
+
+    img
+      width: 100%
+
+.overview > li
+  margin-bottom: 30px
+
+  &:nth-last-child(-n+3)
+    margin-bottom: 0
+
+  &:nth-child(5n+1)
+    margin-left: 0
+    clear: left
+
+  article
+    max-width: 320px
+    margin: auto
+    background: #FFFFFF
+    border: 1px solid #DDDDDD
+    border-radius: 10px
+
+// Comments
+#comments
+  ul
+    margin: 0 0 40px 0
+    padding: 0
+    list-style: none
+
+  li
+    margin: 0 0 10px 0
+    padding: 15px
+
+  .avatar
+    float: right
+    margin: 0 0 10px 10px
+    padding: 3px
+    border: 1px solid
+
+  address
+    font-weight: bold
+
+  time
+    font-size: smaller
+
+  .comcont
+    display: block
+    margin: 0
+    padding: 0
+
+    p
+      margin: 10px 5px 10px 0
+      padding: 0
+
+  form
+    display: block
+    width: 100%
+
+  input
+    width: 100%
+    padding: 10px
+    border: 1px solid
+
+  textarea
+    width: 100%
+    padding: 10px
+    border: 1px solid
+    overflow: auto
+
+  div
+    margin-bottom: 15px
+
+  input
+    &[type="submit"], &[type="reset"]
+      display: inline-block
+      width: auto
+      min-width: 150px
+      margin: 0
+      padding: 8px 5px
+      cursor: pointer
+
+// Sidebar
+.sidebar .sdb_holder
+  margin-bottom: 50px
+
+  &:last-child
+    margin-bottom: 0
+
+
+// Footer
+#footer
+  padding: 80px 0 50px
+
+  .heading
+    margin-bottom: 50px
+    font-size: 1.2rem
+
+  .linklist li
+    display: block
+    margin-bottom: 15px
+    padding: 0 0 15px 0
+    border-bottom: 1px solid
+
+    &:last-child
+      margin: 0
+      padding: 0
+      border: none
+
+    &::before
+      display: table
+      content: ""
+
+    &::after
+      display: table
+      content: ""
+      clear: both
+
+    clear: both
+
+  .contact
+    &.linklist li
+      position: relative
+      padding-left: 40px
+
+      &:last-child
+        position: relative
+        padding-left: 40px
+
+    li
+      *
+        margin: 0
+        padding: 0
+        line-height: 1.6
+
+      i
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        width: 30px
+        font-size: 16px
+        text-align: center
+
+  input, button
+    border: 1px solid
+
+  input
+    display: block
+    width: 100%
+    padding: 8px
+
+  button
+    padding: 8px 18px 10px
+    text-transform: uppercase
+    font-weight: 700
+    cursor: pointer
+
+
+// Copyright
+#copyright
+  padding: 20px 0
+  border-top: 1px solid
+  text-align: center
+
+  *
+    margin: 0
+    padding: 0
+
+
+// Transition Fade
+// This gives a smooth transition to "ALL" elements used in the layout - other than the navigation form used in mobile devices
+// If you don't want it to fade all elements, you have to list the ones you want to be faded individually
+// Delete it completely to stop fading
+*
+  transition: all .3s ease-in-out
+
+  &::before, &::after
+    transition: all .3s ease-in-out
+
+#mainav form *
+  transition: none !important
+
+// Navigation
+nav
+  ul, ol
+    margin: 0
+    padding: 0
+    list-style: none
+
+#mainav, #breadcrumb, .sidebar nav
+  line-height: normal
+
+#mainav
+  .drop::after, li li .drop::after
+    position: absolute
+    font-family: "icomoon"
+    font-size: 10px
+    line-height: 10px
+
+#breadcrumb li a::after, .sidebar nav a::after
+  position: absolute
+  font-family: "icomoon"
+  font-size: 10px
+  line-height: 10px
+
+
+// Top Navigation
+#mainav
+  ul
+    text-transform: uppercase
+
+    ul
+      z-index: 9999
+      position: absolute
+      width: 180px
+      text-transform: none
+      border-radius: 5px
+      background-color: $mainavColor
+      box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.12)
+
+      ul
+        left: 180px
+        top: 0
+
+  li
+    display: inline-block
+    position: relative
+    margin: 0 15px 0 0
+    padding: 0
+
+    &:last-child
+      margin-right: 0
+
+    li
+      width: 100%
+      margin: 0
+
+    a
+      display: block
+      padding: 20px 0
+
+    li a
+      border: solid
+      border-width: 0 0 1px 0
+
+  .drop
+    padding-left: 15px
+
+  li li
+    a, .drop
+      display: block
+      margin: 0
+      padding: 10px 15px
+
+  .drop::after, li li .drop::after
+    content: "\f0d7"
+
+  .drop::after
+    top: 25px
+    left: 5px
+
+  li li .drop::after
+    top: 15px
+    left: 5px
+
+  ul
+    ul
+      visibility: hidden
+      opacity: 0
+
+    li:hover > ul
+      visibility: visible
+      opacity: 1
+
+  form
+    display: none
+    margin: 0
+    padding: 0
+
+    select
+      display: block
+      cursor: pointer
+      outline: none
+
+      option
+        display: block
+        cursor: pointer
+        outline: none
+        margin: 5px
+        padding: 0
+        border: none
+
+      width: 100%
+      padding: 5px
+      border: 1px solid
+
+
+// Breadcrumb
+#breadcrumb
+  padding: 120px 0 30px
+
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+    text-transform: uppercase
+
+  li
+    display: inline-block
+    margin: 0 6px 0 0
+    padding: 0
+
+    a
+      display: block
+      position: relative
+      margin: 0
+      padding: 0 12px 0 0
+      font-size: 12px
+
+      &::after
+        top: 3px
+        right: 0
+        content: "\f101"
+
+    &:last-child a
+      margin: 0
+      padding: 0
+
+      &::after
+        display: none
+
+  .heading
+    margin: 0
+    font-size: 1.6rem
+
+// Sidebar Navigation
+.sidebar nav
+  display: block
+  width: 100%
+
+  li
+    margin: 0 0 3px 0
+    padding: 0
+
+  a
+    display: block
+    position: relative
+    margin: 0
+    padding: 5px 10px 5px 15px
+    text-decoration: none
+    border: solid
+    border-width: 0 0 1px 0
+
+    &::after
+      top: 9px
+      left: 5px
+      content: "\f101"
+
+  ul ul
+    a
+      padding-left: 35px
+
+      &::after
+        left: 25px
+
+    ul a
+      padding-left: 55px
+
+      &::after
+        left: 45px
+
+
+// Back to Top
+#backtotop
+  z-index: 999
+  display: inline-block
+  position: fixed
+  visibility: hidden
+  bottom: 20px
+  right: 20px
+  width: 36px
+  height: 36px
+  line-height: 36px
+  font-size: 16px
+  text-align: center
+  opacity: .2
+
+  i
+    display: block
+    width: 100%
+    height: 100%
+    line-height: inherit
+
+  &.visible
+    visibility: visible
+    opacity: .5
+
+  &:hover
+    opacity: 1
+
+
+// Tables
+table, th, td
+  border: 1px solid
+  border-collapse: collapse
+  vertical-align: top
+
+table, th
+  table-layout: auto
+
+table
+  width: 100%
+  margin-bottom: 15px
+
+th
+  padding: 5px 8px
+
+td
+  padding: 5px 8px
+  border-width: 0 1px
+
+
+// Colours
+body
+  color: #474747
+  background-color: $bodyColor
+
+a
+  color: $linkColor
+
+  &:active, &:focus
+    background: transparent// IE10 + 11 Bugfix - prevents grey background
+
+hr, .borderedbox
+  border-color: #D7D7D7
+
+label span
+  color: #FF0000
+  background-color: inherit
+
+input:focus, textarea:focus, *:required:focus
+  border-color: #D55A77
+
+.overlay
+  &::after
+    color: inherit
+    background-color: rgba(0, 0, 0, 0.55)
+
+  &.light
+    color: #474747
+
+    &::after
+      background-color: rgba(233, 233, 233, 0.9)
+      // #E9E9E9
+
+  &.coloured::after
+    background-color: rgba(213, 90, 119, 0.55)
+    // #D55A77
+
+.btn
+  color: #FFFFFF
+  background-color: #D55A77
+  border-color: #D55A77
+
+  &.inverse:hover
+    color: #FFFFFF
+    background-color: #D55A77
+    border-color: #D55A77
+
+  &:hover, &.inverse
+    color: inherit
+    background-color: transparent
+    border-color: inherit
+
+
+// Rows
+.row1
+  color: #474747
+  background-color: #fff
+
+.row3, .row4
+  color: #474747
+
+
+// Top Bar
+#topbar
+  border-color: rgba(255, 255, 255, 0.2)
+
+  ul li
+    border-color: rgba(255, 255, 255, 0.2)
+
+  > div:last-of-type li:first-child a
+    color: #D55A77
+
+
+// Header
+#header #logo a
+  color: inherit
+
+// Page Intro
+#pageintro footer
+  input
+    color: #000000
+    background-color: #FFFFFF
+
+  button
+    color: #000000
+    background-color: #FFFFFF
+    color: #FFFFFF
+    background-color: #D55A77
+
+.flex-direction-nav a
+  color: rgba(255, 255, 255, 1)
+
+.flex-control-paging li a
+  background-color: rgba(255, 255, 255, 1)
+  border-color: rgba(255, 255, 255, 0)
+
+  &.flex-active
+    background-color: rgba(255, 255, 255, 0)
+    border-color: rgba(255, 255, 255, 1)
+
+
+// Content Area
+#introblocks
+  background-color: #E9E9E9
+
+
+// Footer
+#footer
+  hr, .borderedbox, .linklist li
+    border-color: rgba(0, 0, 0, 0.2)
+
+  input, button
+    border-color: transparent
+
+  input
+    color: #474747
+    background-color: #E9E9E9
+
+    &:focus
+      border-color: #D55A77
+
+  button
+    color: #FFFFFF
+    background-color: #D55A77
+
+// Copyright
+#copyright
+  border-color: rgba(0, 0, 0, 0.1)
+
+
+// Navigation
+#mainav
+  li a
+    color: inherit
+
+  .active a, a:hover
+    color: #D55A77
+    background-color: inherit
+
+  li
+    &:hover > a
+      color: #D55A77
+      background-color: inherit
+
+    li a
+      color: #474747
+      border-color: rgba(255, 255, 255, 0.4)
+
+  .active li a
+    color: #474747
+    border-color: rgba(255, 255, 255, 0.4)
+
+  li li:hover > a, .active .active > a
+    color: #FFFFFF
+    background-color: #D55A77
+
+  form select
+    color: #FFFFFF
+    background-color: #000000
+
+#breadcrumb
+  a
+    color: inherit
+    background-color: inherit
+
+  li:last-child a
+    color: #D55A77
+
+.container .sidebar nav a
+  color: inherit
+  border-color: #D7D7D7
+
+  &:hover
+    color: #D55A77
+
+
+#backtotop
+  color: #FFFFFF
+  background-color: #D55A77
+
+
+
+
+// Tables + Comments
+table, th, td
+  border-color: #D7D7D7
+
+#comments
+  .avatar, input, textarea
+    border-color: #D7D7D7
+
+  input:focus, textarea:focus, *:required:focus
+    border-color: #D55A77
+
+th
+  color: #FFFFFF
+  background-color: #373737
+
+tr
+  color: inherit
+  background-color: #FBFBFB
+
+#comments
+  li
+    color: inherit
+    background-color: #FBFBFB
+
+  input
+    &[type="submit"], &[type="reset"]
+      color: inherit
+      background-color: #FBFBFB
+
+tr:nth-child(even), #comments li:nth-child(even)
+  color: inherit
+  background-color: #F7F7F7
+
+table a, #comments a
+  background-color: inherit
+
+
+
+// Media Queries
+@-ms-viewport
+  width: device-width
+
+$layout-breakpoint-450: 450px
+$layout-breakpoint-650: 650px
+$layout-breakpoint-750: 750px
+$layout-breakpoint-1180: 1180px
+$layout-breakpoint-1280: 1280px
+
+
+// Max Wrapper Width - Laptop, Desktop etc.
+@media (min-width: $layout-breakpoint-1280)
+  .hoc
+    max-width: 1280px
+
+// Mobile Devices
+@media (max-width: $layout-breakpoint-1180)
+  .one_third
+    width: 31.28834%
+    float: none
+    margin: 0 0 0 1%
+
+  .overview > li:nth-child(5n+1)
+    clear: none
+    margin: 0 0 0 1%
+
+  .hoc
+    max-width: 90%
+
+  #header
+    padding: 30px 0
+
+    #logo
+      margin-top: 3px
+
+  #mainav
+    ul
+      display: none
+
+    form
+      display: block
+
+  #comments input[type="reset"]
+    margin-top: 10px
+
+
+  #copyright p:first-of-type
+    margin-bottom: 10px
+
+
+@media (max-width: $layout-breakpoint-750)
+  .col_onethird, .col_three_quarters
+    width: 100%
+
+  .flex-direction-nav
+    .flex-prev, .flex-next
+      display: none
+
+  .flex-control-nav
+    display: block
+
+  .imgl, .imgr
+    display: inline-block
+    float: none
+    margin: 0 0 10px 0
+
+  .fl_left, .fl_right
+    display: block
+    float: none
+
+  .group .group > *:last-child
+    margin-bottom: 0
+
+  .clear
+    .clear > *:last-child, .group > *:last-child
+      margin-bottom: 0
+
+  .group .clear > *:last-child
+    margin-bottom: 0
+
+  .one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter
+    display: block
+    float: none
+    width: auto
+    margin: 0 0 30px 0
+    padding: 0
+
+  #header
+    text-align: center
+
+    #logo
+      margin: 0 0 15px 0
+
+  #introblocks > ul > li:last-child
+    margin-bottom: 0
+
+  .overview > li:nth-last-child(-n+3)
+    margin-bottom: 50px
+
+@media (max-width: $layout-breakpoint-450)
+  #pageintro li footer form
+    max-width: none
+    width: 100%
+
+
+
+// Other
+@media (max-width: $layout-breakpoint-650)
+  .scrollable
+    display: block
+    width: 100%
+    margin: 0 0 30px 0
+    padding: 0 0 15px 0
+    overflow: auto
+    overflow-x: scroll
+
+    table
+      margin: 0
+      padding: 0
+      white-space: nowrap
+
+  .inline li
+    display: block
+    margin-bottom: 10px
+
+  .pushright li
+    margin-right: 0
+
+  .font-x2
+    font-size: 1.4rem
+
+  .font-x3
+    font-size: 1.6rem
+
+  #pageintro li
+    article
+      max-width: none
+      width: 100%
+
+    .heading
+      font-size: 1.6rem
+
+
