@@ -24,38 +24,53 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar
-      :clipped-left="clipped"
-      fixed
-      app
-    >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-btn
-        icon
-        @click.stop="miniVariant = !miniVariant"
-      >
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="clipped = !clipped"
-      >
-        <v-icon>mdi-application</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="fixed = !fixed"
-      >
-        <v-icon>mdi-minus</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title" />
-      <v-spacer />
-      <v-btn
-        icon
-        @click.stop="rightDrawer = !rightDrawer"
-      >
-        <v-icon>mdi-menu</v-icon>
-      </v-btn>
+    <v-app-bar dark color="#FFFFFF" absolute>
+      <v-img
+        width="100px"
+        height="30px"
+        contain
+        :src="require('~/assets/images/BookFast_logo.png')"
+      />
+
+      <v-spacer></v-spacer>
+      <v-item-group>
+        <v-row>
+          <v-img contain :src="require('~/assets/images/magnifier.svg')" />
+          <v-btn color="#000000" small text> 找課程 </v-btn>
+
+          <v-img contain :src="require('~/assets/images/bag.svg')" />
+          <v-btn color="#000000" small text> 找方案 </v-btn>
+
+          <v-img contain :src="require('~/assets/images/exclamation.svg')" />
+          <v-btn color="#000000" small text> 場館資訊 </v-btn>
+
+          <v-img contain :src="require('~/assets/images/cellphone.svg')" />
+          <v-btn color="#000000" small text> 下載App </v-btn>
+
+          <v-img contain :src="require('~/assets/images/user.svg')" />
+          <v-btn color="#000000" small text> Hi 魏麗莎 </v-btn>
+        </v-row>
+      </v-item-group>
+
+      <v-item-group>
+        <v-container>
+          <v-btn width="30px" height="30px" icon>
+            <v-img contain :src="require('~/assets/images/facebook.svg')" />
+          </v-btn>
+
+          <v-btn width="30px" height="30px" icon>
+            <v-img contain :src="require('~/assets/images/line.svg')" />
+          </v-btn>
+
+          <v-btn width="30px" height="30px" icon>
+            <v-img contain :src="require('~/assets/images/ig.svg')" />
+          </v-btn>
+
+          <v-btn width="30px" height="30px" icon>
+            <v-img contain :src="require('~/assets/images/youtube.svg')" />
+          </v-btn>
+        </v-container>
+      </v-item-group>
     </v-app-bar>
     <v-main>
       <v-container>
