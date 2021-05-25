@@ -94,11 +94,23 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-footer
-      :absolute="!fixed"
-      app
-    >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+    <v-footer color="#EEEEEE" height="170px" :absolute="!fixed" app>
+      <div style="margin: 0px auto; color: rgba(0, 0, 0, 0.56); font-family: SF Compact Text; font-style: normal; font-weight: normal; font-size: 12px; font-height: 22px; text-align: center">
+        <div id="copyright">
+          <p>&copy; 2020 NewPOS TECH. CORP.All Rights Reserved.</p>
+          <!-- class="fl_left" -->
+          <p>
+            <a target="_blank" href="https://www.google.com/" title="服務條款"
+              >服務條款</a
+            >
+            &
+            <a target="_blank" href="https://www.google.com/" title="隱私權政策"
+              >隱私權政策</a
+            >｜ Powered by <span style="text-decoration:underline;">BookFastPOS</span>｜Version1.0
+          </p>
+          <!-- class="fl_right" -->
+        </div>
+      </div>
     </v-footer>
   </v-app>
 </template>
