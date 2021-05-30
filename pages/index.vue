@@ -71,6 +71,16 @@
             Continue
           </v-btn>
         </v-card-actions>
+         <v-card-actions>
+          <v-spacer />
+          <v-btn
+            color="red"
+            nuxt
+            to="/inspire2"
+          >
+            Continue
+          </v-btn>
+        </v-card-actions>
       </v-card>
     </v-col>
   </v-row>

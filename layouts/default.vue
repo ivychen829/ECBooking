@@ -35,8 +35,10 @@
       <v-spacer></v-spacer>
       <v-item-group>
         <v-row>
-          <v-img contain :src="require('~/assets/images/magnifier.svg')" />
-          <v-btn color="#000000" small text> 找課程 </v-btn>
+          <v-hover >
+            <v-img contain :src="require('~/assets/images/magnifier.svg')" />
+            <v-btn color="#000000" small text> 找課程 </v-btn>
+          </v-hover>
 
           <v-img contain :src="require('~/assets/images/bag.svg')" />
           <v-btn color="#000000" small text> 找方案 </v-btn>
@@ -77,25 +79,29 @@
         <nuxt />
       </v-container>
     </v-main>
-    <v-navigation-drawer
-      v-model="rightDrawer"
-      :right="right"
-      temporary
-      fixed
-    >
+    <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
       <v-list>
         <v-list-item @click.native="right = !right">
           <v-list-item-action>
-            <v-icon light>
-              mdi-repeat
-            </v-icon>
+            <v-icon light> mdi-repeat </v-icon>
           </v-list-item-action>
           <v-list-item-title>Switch drawer (click me)</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
     <v-footer color="#EEEEEE" height="170px" :absolute="!fixed" app>
-      <div style="margin: 0px auto; color: rgba(0, 0, 0, 0.56); font-family: SF Compact Text; font-style: normal; font-weight: normal; font-size: 12px; font-height: 22px; text-align: center">
+      <div
+        style="
+          margin: 0px auto;
+          color: rgba(0, 0, 0, 0.56);
+          font-family: SF Compact Text;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          font-height: 22px;
+          text-align: center;
+        "
+      >
         <div id="copyright">
           <p>&copy; 2020 NewPOS TECH. CORP.All Rights Reserved.</p>
           <!-- class="fl_left" -->
@@ -106,7 +112,9 @@
             &
             <a target="_blank" href="https://www.google.com/" title="隱私權政策"
               >隱私權政策</a
-            >｜ Powered by <span style="text-decoration:underline;">BookFastPOS</span>｜Version1.0
+            >｜ Powered by
+            <span style="text-decoration: underline">BookFastPOS</span
+            >｜Version1.0
           </p>
           <!-- class="fl_right" -->
         </div>
@@ -117,28 +125,28 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       clipped: false,
       drawer: false,
       fixed: false,
       items: [
         {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
+          icon: "mdi-apps",
+          title: "Welcome",
+          to: "/",
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
-        }
+          icon: "mdi-chart-bubble",
+          title: "Inspire",
+          to: "/inspire",
+        },
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Vuetify.js'
-    }
-  }
-}
+      title: "Vuetify.js",
+    };
+  },
+};
 </script>
