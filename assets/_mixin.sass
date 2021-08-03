@@ -1,0 +1,148 @@
+// default Color
+$--color-success:   #67c23a !default
+$--color-warning:   #e6a23c !default
+$--color-danger:    #f56c6c !default
+$--color-info:      #909399 !default
+
+$--color-pink:      #ee11ab !default
+$--color-blue:      blue
+$--color-green:     #91c423
+$--color-green-line:#00B900
+
+$--color-gray:      #DDD
+$--color-gray-light: rgba(0, 0, 0, 0.56)
+$--color-gray-light-1: rgba(0, 0, 0, 0.38)
+$--color-gray-light-2: rgba(0, 0, 0, 0.15)
+$--color-gray-light-3: rgba(0, 0, 0, 0.05)
+$--color-gray-dark: rgba(0, 0, 0, 0.8)
+$--color-white:     #fff
+$--color-black:     rgba(0, 0, 0, 0.87)
+
+// Color
+$primary-color:     $--color-green
+$head-color:        $--color-white
+$body-Color:        #FAFAFA
+$main-Color:        #fff
+$link-Color:        #91C423
+$colBox-Color:      #fff
+$tab-Color:         #91C423
+
+// fontColor
+$font--default:     $--color-white
+$font--content:     rgba(#000, 0.56)
+
+
+
+// fontSize
+$fontSize:          0.8125rem    //13px
+$fontSizeLabel:     0.75rem      //12px
+$fontSize--md:      1rem         //16px
+$fontSize--xmd:     1.125rem     //18px
+$fontSize--lg:      1.5625rem    //25px
+$fontSize--xlg:     2.8125rem    //45px
+
+// font Weight
+$fontWeight--300:   300
+$fontWeight--400:   400
+$fontWeight--500:   500
+$fontWeight--bold:  bold
+
+// Other
+$num-of-tabs:       6
+$boxShadow:         0px 0px 16px rgba(0, 0, 0, 0.1)
+$boxShadow--dark:   0px 0px 16px rgba(0, 0, 0, 0.3)
+$boxSizingDefault:  16px
+
+
+// default border
+$borderStyle:       1px solid #DDD
+$borderRadius:      10px
+$borderRadius-sm:   2px
+$borderRadius-md:   5px
+$borderRadius-half: 50%
+
+
+// default Layout
+$layout-breakpoint-450: 450px
+$layout-breakpoint-650: 650px
+$layout-breakpoint-750: 750px
+$layout-breakpoint-900: 900px
+$layout-breakpoint-1180: 1180px
+$layout-breakpoint-1280: 1280px
+
+
+
+$pa--large: 	30px
+$pa--regular: 	16px
+$pa--small:		8px
+$pa-little:		2px
+
+/*内边距,全,上,下,左,右*/
+@mixin pa-large()
+    padding: $pa--large
+
+@mixin pa-large-top
+    padding-top: $pa--large
+
+@mixin pa-large-right
+    padding-right: $pa--large
+
+@mixin pa-large-bottom
+    padding-bottom: $pa--large
+
+@mixin pa-large-left
+    padding-left: $pa--large
+
+@mixin pa-regular
+    padding: $pa--regular
+
+@mixin pa-regular-tb
+    padding: $pa--regular 0
+
+@mixin pa-regular-lr
+    padding: 0 $pa--regular
+
+@mixin pa-regular-top
+    padding-top: $pa--regular
+
+@mixin pa-regular-right
+    padding-right: $pa--regular
+
+@mixin pa-regular-bottom
+    padding-bottom: $pa--regular
+
+@mixin pa-regular-left
+    padding-left: $pa--regular
+
+@mixin pa-small-small
+    padding: $pa--small
+
+@mixin pa-small-top
+    padding-top: $pa--small
+
+@mixin pa-small-right
+    padding-right: $pa--small
+
+@mixin pa-small-bottom
+    padding-bottom: $pa--small
+
+@mixin pa-small-left
+    padding-left: $pa--small
+
+@mixin pa-little
+    padding: $pa-little
+
+@mixin pa-little-top
+    padding-top: $pa-little
+
+@mixin pa-little-right
+    padding-right: $pa-little
+
+@mixin pa-little-bottom
+    padding-bottom: $pa-little
+
+@mixin pa-little-left
+    padding-left: $pa-little
+
+@mixin pa-none
+    padding: 0 !important

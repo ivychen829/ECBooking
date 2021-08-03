@@ -1,0 +1,310 @@
+// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
+//
+// The variables you want to modify
+@import "component"
+@import "layout"
+@import "_mixin"
+
+.v-application .caption
+  font-family: PingFang TC, sans-serif, !important
+
+.v-bg-main-color
+  background-color: #FAFAFA !important
+
+//Over icon
+.mdi-radiobox-blank::before
+    content: "\e926"
+    font-family: 'ecbookingIcon'
+    color: $--color-gray-light
+
+.mdi-radiobox-marked::before
+    content: "\e925"
+    font-family: 'ecbookingIcon'
+
+.mdi-checkbox-blank-outline::before
+    content: "\e924"
+    font-family: 'ecbookingIcon'
+
+.v-radio--is-disabled
+  .mdi-radiobox-blank::after
+    transform: scale(.8) !important
+    opacity: 1 !important
+
+a
+  text-decoration: none
+  &:hover
+    text-decoration: underline !important
+  &.v-underline
+     &:hover
+      text-decoration: none !important
+  &.grey--text.text--darken-1
+    &:hover
+      color: $primary-color !important
+
+//header menu style
+.v-media-menu
+  i
+    font-size: 1.125rem
+    margin-right: 9.8px
+  .v-btn__content
+    font-weight: 600
+
+.v-menu__content
+  font-weight: 500
+  font-size:  0.875rem
+  
+.btn-fit
+  font-weight: 300 !important
+  i
+    margin-right: 14.5px !important
+    color: $--color-gray-light-1 !important
+
+.img-hover-zoom
+  .v-image
+    background-color: gray
+  .v-image__image
+    opacity: .7
+  &:hover
+    &.v-sheet.v-card:not(.v-sheet--outlined)
+      transition: 0.2s
+      box-shadow: 0 8px 10px $--color-gray-light-2, 0 8px 20px $--color-gray-light-2
+    .v-image__image
+      transition: 0.3s
+      transform: scale(1.05)
+      opacity: 1
+
+.theme--text
+  color: $--color-green !important
+
+.text-middle
+  vertical-align: middle !important
+
+.dis-shadow
+  box-shadow: none !important
+
+.en-shadow
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1)
+
+.mx-full-width
+  &.v-card
+    border-radius: $borderRadius !important
+  .v-card__title
+    font-weight: $fontWeight--bold
+    font-size: $fontSize--md
+  .v-card__text
+    font-size: $fontSizeLabel
+
+.v-card-border
+  padding: 6px
+  border: 1px solid $--color-gray
+  border-radius: $borderRadius
+  background-color: $--color-white
+  .v-list-item
+    min-height: 16px
+
+.v-card-outline
+  .v-sheet.v-card:not(.v-sheet--outlined)
+    box-shadow: none
+    border: 1px solid $--color-gray
+
+.v-list-item
+  min-height: 40px !important
+
+.v-toolbar
+  box-shadow: none !important
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important
+  background-color: white !important
+
+.v-sheet.alpha
+   background-color: transparent !important
+
+.sticky-top
+  position: -webkit-sticky
+  position: sticky
+  top: 70px
+
+.out-broder
+  border-radius: $borderRadius-md
+  border: 1px solid $--color-gray
+  padding: 1px 7px
+  display: inline-block
+  color: $--color-gray-light
+
+.v-expansion-title-width//list的行距及寬度
+  .ti-line-height div
+    @include pa-small-top
+
+  div > span:first-child
+    display: inline-block
+    width: 90px
+
+
+// overlap "VExpansionPanel.sass"
+.theme--light.v-btn:hover::before, 
+.theme--light.v-btn:focus::before
+  opacity: 0 !important
+.theme--light.v-list-item--active:hover::before, .theme--light.v-list-item--active::before
+  opacity: 0 !important
+
+
+.v-menu__content
+  border-radius: $borderRadius !important
+
+.v-expansion-panel .v-sub-head
+  color: $--color-gray-light
+  & p
+    margin-bottom: 4px
+
+.v-expansion-panel-header__icon
+  border: 1px solid $--color-gray-light-2
+  border-radius: $borderRadius-half
+  padding: 6px
+  
+.v-expansion-panel-header.hide-icon
+  .v-expansion-panel-header__icon
+    display: none
+
+.theme--light.v-expansion-panels .v-expansion-panel
+  border: 1px solid #ddd
+  border-radius: $borderRadius !important
+
+.v-expansion-panels .v-expansion-panel
+  &.theme--null
+    border: none !important
+    border-radius: 0 !important
+    &::before
+      box-shadow: none !important
+  &.theme--unborder
+    .v-expansion-panel-header__icon
+      border: none !important
+
+.v-border-bottom
+  .v-expansion-panel
+    border: none !important
+    &::before
+      box-shadow: none !important
+
+
+.v-application--is-ltr .v-tabs--align-with-title > .v-tabs-bar:not(.v-tabs-bar--show-arrows):not(.v-slide-group--is-overflowing) > .v-slide-group__wrapper > .v-tabs-bar__content > .v-tab:first-child, .v-application--is-ltr .v-tabs--align-with-title > .v-tabs-bar:not(.v-tabs-bar--show-arrows):not(.v-slide-group--is-overflowing) > .v-slide-group__wrapper > .v-tabs-bar__content > .v-tabs-slider-wrapper + .v-tab
+  margin-left: 0 !important
+
+.v-tabs-items
+  &.v-un-window
+    &.v-window
+      overflow: unset !important
+
+
+.v-pagination .v-pagination__item, .v-pagination .v-pagination__navigation
+  box-shadow: none
+  border: 1px solid $--color-gray-light-2
+  &:hover
+    color: $primary-color !important
+
+.v-select__selection--comma
+  font-weight: $fontWeight--500
+
+.theme--light.v-footer
+  font-size: $fontSizeLabel
+  font-weight: $fontWeight--400
+
+.v-text-field fieldset, .v-text-field .v-input__control, .v-text-field .v-input__slot
+  border-radius: 10px !important
+  border-color: $--color-gray !important
+
+
+// All media setting
+@media (min-width: 0)
+  .text-xs-center
+    text-align: center !important
+
+@media (max-width: $layout-breakpoint-1180)
+  .member-right
+    width: 80%
+  .v-slide-width
+    width: 860px
+
+@media (max-width: $layout-breakpoint-900)
+  .v-media-menu
+    display: none
+  .v-media-mdimenu
+    display: inline-block
+
+@media (max-width: $layout-breakpoint-750)
+  .member-right
+    width: 100%
+  .search-bar
+    width: initial
+    .filter-bar
+      .px-3, .px-2, .mr-2
+        padding: 0 !important
+        margin-right: 0 !important
+  .v-sliders
+    display: none
+  .v-sliders-mobile
+    display: block !important
+
+@media (max-width: $layout-breakpoint-450)
+  .v-media-hide //手機版隱藏
+    display: none !important
+  .v-media-inline //手機版隱藏
+    display: inline-block !important
+
+  .mx-full-width
+    max-width: 100% !important
+  .v-slide-width
+    display: none
+  .bg--white //預約課程header top的距離
+    &.bg--sticky
+      top: 57px
+  .v-tabs
+    &.tab-sticky
+      .v-tabs-bar
+        top: 70px
+  .v-media-block
+    width: 100%
+
+  .v-dialog--fullscreen
+    .v-dialog--header
+      height: 50px
+      z-index: 300 !important
+
+@media (min-width: $layout-breakpoint-450)
+  .mx-full-width
+    max-width: 90% !important
+    .mx-footer//Button Style
+      color: $primary-color
+      text-align: right
+      position: absolute
+      right: 0
+      bottom: 4px
+      .mx-line
+        display: inline-block
+
+
+@media (min-width: $layout-breakpoint-900)
+  .v-media-mdimenu
+    display: none !important
+
+@media (min-width: $layout-breakpoint-750)
+  .mx-full-width
+    max-width: 100% !important
+    .mx-footer//Button Style
+      flex-direction: initial
+      text-align: left
+      position: initial
+      right: unset
+      bottom: unset
+      .mx-line
+        display: inline-block
+    .v-image
+      height: 130px !important
+
+  .col-md-3
+    flex: 0 0 33% !important
+    max-width: 33% !important
+
+@media (min-width: $layout-breakpoint-1180)
+  .col-md-3
+    flex: 0 0 20% !important
+    max-width: 20% !important
+

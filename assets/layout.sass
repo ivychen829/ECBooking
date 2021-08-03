@@ -1,0 +1,283 @@
+@import "_mixin"
+$body-font-family: "PingFang TC" !important
+html, *
+  font-family: PingFang TC, sans-serif
+.v-application .caption
+  font-family: PingFang TC, sans-serif, !important
+
+.large-title
+  font-size: $fontSize--xlg
+  font-weight: $fontWeight--300
+
+//----------horizontal line with words in the middle---Start
+.divider
+  display: flex
+  &:before,
+  &:after
+    content: ""
+    flex: 1
+  
+// Base line
+.line
+  align-items: center
+  margin: 1em -1em
+  font-size: $fontSizeLabel
+  Color: $--color-gray-light
+  
+  &:before,
+  &:after 
+    height: 0.5px
+    margin: 0 1em
+  
+.razor
+    &:before,
+    &:after
+      box-shadow: 0 0.5px 0 $--color-gray-light
+//----------horizontal line with words in the middle---End
+
+
+//----------Button Style---Start
+.btn-outline
+  border-radius: 30px !important
+  border: 1px solid $--color-black
+  font-weight: 400 !important
+  i
+    display: none
+
+.v-btn--icon.v-size--default
+  width: 38px !important
+  height: 38px !important
+
+.btn-lineColor
+  background-color: $--color-green-line !important
+  color: $--color-white !important
+  .v-icon
+    font-size: 22px !important
+
+.v-btn
+  background-color: $--color-white
+  font-weight: 400 !important
+  text-transform: initial !important
+  &.btn-bg--opacity
+    background-color: transparent
+
+  &.btn-theme
+    font-size: 0.875rem !important
+    color: $--color-black !important
+    border-color: $--color-gray-light-2
+    border-radius: $borderRadius
+    padding: 10px 16px !important
+    height: initial !important
+    &.primary--text
+      border-color: $primary-color
+    &:hover
+      color: $primary-color !important
+
+  &.v-btn--is-elevated
+    box-shadow: none !important
+    border-radius: $borderRadius
+    height: 50px !important
+
+.v-media-mdimenu
+  .v-list-group__header__prepend-icon, .v-list-item__icon
+    margin-right: 12px !important
+  .v-list-group__header__prepend-icon i
+    color: $primary-color !important
+
+.v-list .v-list-item--active
+  color: $--color-black !important
+//----------Button Style---End
+
+
+//Longin input
+.fieldset
+  border: 1px solid $--color-gray
+  border-radius: $borderRadius
+  padding: 10px
+
+  input
+    letter-spacing: 3px
+
+  .v-input__prepend-inner
+    padding-right: 10px !important
+
+  .v-input__slot
+    margin-bottom: 0
+    &:before, &:after
+      border-style: none !important
+
+  .v-text-field__details, .v-messages
+    display: none !important
+
+
+.input-null
+  .v-text-field__details
+    display: none
+
+
+//Dialog Style
+.v-dialog-sty
+  // 指定Input內的icon顏色
+  .v-text-field
+    .v-input__icon--prepend-inner .v-icon
+      color: $--color-black !important
+  // 指定Range Sliders內button的顏色
+  .v-slider__thumb
+    box-shadow: $boxShadow
+    &::before
+      background-color: $--color-white !important
+      border: 1px solid $primary-color !important
+      width: 20px
+      height: 20px
+      border-radius: 50%
+      position: absolute
+      left: -4px
+      top: -4px
+      opacity: 1
+      transform: scale(.9) !important
+
+
+.v-checkbox-inline
+  .v-input
+    max-width: initial !important
+    display: inline-block !important
+  span
+    vertical-align: text-bottom
+
+.v-bg-gray
+  background-color: $--color-gray-light-3
+  padding: 16px
+
+//Filter bar
+.search-bar
+  width: 500px
+  .container
+      padding: 0 !important
+  &.large
+    width: 100%
+      
+  .v-select
+    border-radius: $borderRadius !important
+
+  .filter-bar
+    width: 100%
+    background-color: $--color-white
+    border-radius: $borderRadius !important
+    padding: 12px
+    margin-top: -30px
+    position: relative
+    .v-icon
+      font-size: 18px
+    a
+      color: $--color-black
+      transition: 0.2s
+      font-weight: $fontWeight--500
+      &:hover, &:focus
+        color: $primary-color
+      &.primary--text
+        color: $primary-color
+
+.v-line
+  border: 0.01em solid $--color-gray-light-2
+  height: 65%
+  position: absolute
+  top: 9px
+
+
+.v-max-scroll
+  // height: calc(100vh - 200px)
+  max-height: 610px
+  overflow-y: auto
+  .v-chip--label
+    border-radius: $borderRadius !important
+
+
+//Banner sliders
+.v-sliders
+  background-color: white
+  margin-top: -30px
+  display: block
+  .vueperslides__arrow
+    background-color: $--color-white
+    border-radius: $borderRadius-half !important
+    border: 1px solid $--color-gray-light-2
+    width: 50px
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.15)
+    svg
+      width: 2.5em
+      stroke-width: 3px
+
+.vueperslides--rtl .vueperslides__arrows--outside .vueperslides__arrow--next, .vueperslides__arrows--outside .vueperslides__arrow--prev
+  left: 2em !important
+.vueperslides--rtl .vueperslides__arrows--outside .vueperslides__arrow--prev, .vueperslides__arrows--outside .vueperslides__arrow--next
+  right: 2em !important
+
+//Banner sliders for mobile
+.v-sliders-mobile
+  display: none !important
+  width: 80% !important
+  margin-top: -30px
+  .v-carousel
+    border-radius: $borderRadius
+  .v-carousel__controls
+    background: transparent
+    .v-btn--icon.v-size--small
+      width: 10px
+      height: 10px
+      color: $--color-gray-light
+
+  .v-btn:before
+    opacity: .3 !important
+    background-color: $--color-black
+  .theme--dark.v-btn--active:hover::before, .theme--dark.v-btn--active::before
+    opacity: .7 !important
+    background-color: $--color-black
+  .v-btn > .v-btn__content .v-icon
+    color: transparent
+
+  .v-image__image, .v-image__placeholder
+    width: 140%
+    left: -15%
+
+
+//Small Container Layout (e.g. Booking)
+.container
+  &.v-container-sm
+    max-width: 960px
+
+//Header Image Opacity
+.v-img__opacity
+  .v-image__image
+    opacity: .4
+
+.v-img__radius
+  .v-image__image
+    border-radius: $borderRadius
+
+.bg--white
+  background-color: white
+  position: absolute
+  left: 0
+  margin: 0 auto
+  height: 60px
+  width: 100%
+  &.bg--sticky
+    position: sticky
+    top: 64px
+    z-index: 3
+    width: 100%
+
+.v-picker
+  &.pic-notitle
+    .v-picker__title
+      display: none
+
+.v-text-field
+  &.v-font-lg
+    input
+      max-height: 45px !important
+      padding-bottom: 15px !important
+      font-size: $fontSize--lg !important
+      letter-spacing: 3px
+      color: $primary-color !important
+
